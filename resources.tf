@@ -33,7 +33,7 @@ module "grafana" {
 }
 
 module "mcp" {
-  source = "./modules/n8n"
+  source = "./modules/mcp"
   depends_on = [module.grafana]
 }
 
