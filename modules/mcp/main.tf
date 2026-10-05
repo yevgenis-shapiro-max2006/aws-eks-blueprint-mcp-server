@@ -46,3 +46,4 @@ resource "helm_release" "terraform_mcp_server" {
     kubernetes_secret.terraform_mcp_tfe,
   ]
 }
+
