@@ -1,5 +1,4 @@
-<img width="1599" height="984" alt="image" src="https://github.com/user-attachments/assets/fbeb22d8-c444-4a4e-9b09-ec73b689d0a5" />
-
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/be6b599a-9d23-414e-9acf-b5e055d69ee7" />
 
 
 ## AWS | MCP Workflow Automation
