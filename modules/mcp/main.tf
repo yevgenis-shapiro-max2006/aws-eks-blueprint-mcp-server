@@ -5,6 +5,21 @@ resource "kubernetes_namespace_v1" "terraform_mcp" {
   }
 }
 
+
+resource "kubernetes_secret" "terraform_mcp_tfe" {
+  metadata {
+    name      = "terraform-mcp-tfe"
+    namespace = kubernetes_namespace.terraform_mcp.metadata[0].name
+  }
+
+  type = "Opaque"
+
+  data = {
+    TFE_TOKEN = var.tfe_token
+  }
+}
+
+
 resource "helm_release" "terraform_mcp_server" {
   name       = "terraform-mcp-server"
   namespace  = kubernetes_namespace_v1.terraform_mcp.metadata[0].name
@@ -27,6 +42,7 @@ resource "helm_release" "terraform_mcp_server" {
   }
 
   depends_on = [
-    kubernetes_namespace_v1.terraform_mcp
+    kubernetes_namespace_v1.terraform_mcp,
+    kubernetes_secret.terraform_mcp_tfe,
   ]
 }
