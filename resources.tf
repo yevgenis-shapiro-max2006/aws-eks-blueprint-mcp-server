@@ -32,7 +32,7 @@ module "grafana" {
   depends_on = [module.prometheus]
 }
 
-module "n8n" {
+module "mcp" {
   source = "./modules/n8n"
   depends_on = [module.grafana]
 }
