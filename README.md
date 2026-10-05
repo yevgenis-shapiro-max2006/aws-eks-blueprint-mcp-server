@@ -2,7 +2,7 @@
 
 
 ## AWS | MCP Workflow Automation
-SonarQube is a code quality and application security platform. It analyzes your source code and finds problems before the code reaches production.
+The Terraform MCP Server is a Model Context Protocol (MCP) server that integrates seamlessly with Terraform Registry and HCP Terraform APIs, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development.
 
 
 
